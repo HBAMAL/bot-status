@@ -18,7 +18,7 @@ def main():
     with user_client:
         while True:
             print("[INFO] starting to check uptime..")
-            edit_text = f"**🥰 @Telsabots  Uptime Status** (Updated in every 1 hour🕐)\n\n"
+            edit_text = f"**🥰 @Telsabots  Uptime Status** (Updated in every 5 hour🕐)\n\n"
             for bot in bots:
                 print(f"[INFO] checking @{bot}")
                 snt = user_client.send_message(bot, '/start')
@@ -47,8 +47,7 @@ def main():
                 time.sleep(5)
             print(f"[INFO] everything done! sleeping for 15 mins...")
 
-            time.sleep(30 * 60)
-
+            time.sleep(5*60*60)
 
 if __name__ == "__main__":
    main()
